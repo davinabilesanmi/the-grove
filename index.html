@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Grove</title>
+<meta name="description" content="A digital garden of notes and ideas that grow and link together over time.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌲</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand" href="#/"><span class="brand-mark">🌲</span> The Grove</a>
+      <div class="nav-links">
+        <a href="#/" data-nav="home">Garden</a>
+        <a href="#/map" data-nav="map">Map</a>
+        <button type="button" id="wander" class="link-btn" title="Wander to a random note">🎲 Wander</button>
+        <a class="btn small" href="#/plant" data-nav="plant">+ Plant</a>
+        <button type="button" id="theme" class="icon-btn" aria-label="Toggle dark mode" title="Toggle dark mode">🌓</button>
+      </div>
+    </nav>
+    <svg class="treeline" viewBox="0 0 1200 48" preserveAspectRatio="none" aria-hidden="true"><path id="treeline-path"/></svg>
+  </header>
+
+  <main id="app"></main>
+
+  <footer class="site-footer">
+    <p>Tended slowly. Notes you plant here are saved in this browser — <button type="button" id="export" class="link-btn">export them as a .txt file</button> to back them up, or <button type="button" id="import" class="link-btn">import a backup</button>.</p>
+    <input type="file" id="import-file" accept=".txt,text/plain" hidden>
+  </footer>
+
+  <div id="peek" class="peek" hidden></div>
+
+  <script src="notes.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
